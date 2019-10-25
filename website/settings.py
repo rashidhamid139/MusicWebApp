@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'music.apps.MusicConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,9 +77,15 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'raskfbod',
+        'USER': 'raskfbod',
+        'PASSWORD': 'IGAzUUYeyThEbZZo9x10qJjL3l3c3ElC',
+        'HOST' : 'john.db.elephantsql.com',
+        'PORT': '5432',
+
     }
+
 }
 
 
